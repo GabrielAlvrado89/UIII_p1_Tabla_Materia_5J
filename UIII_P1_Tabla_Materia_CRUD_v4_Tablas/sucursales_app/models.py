@@ -5,7 +5,7 @@ class sucursales(models.Model):
     id_sucursal=models.IntegerField()
     nombre=models.CharField(max_length=100)
     Direccion=models.CharField(primary_key=True,max_length=6)
-    NumTelefono=models.IntegerField(max_length=15)
+    NumTelefono=models.IntegerField()
     creditos=models.PositiveSmallIntegerField()
     correo=models.CharField(max_length=100)
     Horario=models.CharField(max_length=4)
