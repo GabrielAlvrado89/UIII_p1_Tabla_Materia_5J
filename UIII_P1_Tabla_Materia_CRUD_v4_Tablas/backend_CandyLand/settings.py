@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'backend_materia.urls'
+ROOT_URLCONF = 'backend_CandyLand.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend_materia.wsgi.application'
+WSGI_APPLICATION = 'backend_CandyLand.wsgi.application'
 
 
 # Database
