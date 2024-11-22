@@ -25,7 +25,7 @@ def seleccionarSucursal(request, id_sucursal):
 
 
 def editarSucursal(request):
-    id_sucursal=request.POST['txtcodigo']
+    id_sucursal=request.POST['txtid']
     nombre=request.POST['txtnombre']
     Direccion=request.POST["txtdireccion"]
     NumTelefono=request.POST["NumTel"]
