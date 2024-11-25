@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import sucursales
 # Create your views here.
-def inicio_vista(request):
+def inicio_sucursal(request):
     sucursal=sucursales.objects.all()
     return  render(request,"gestionarsucursales.html",{"misucursal":sucursal})
 
@@ -17,7 +17,7 @@ def registrarSucursal(request):
     guardarSucursal=sucursales.objects.create(
     id_sucursal=id_sucursal, nombre=nombre, Direccion=Direccion, NumTelefono=NumTelefono,
     creditos=creditos, correo=correo, Horario=Horario)
-    return redirect("/")
+    return redirect("sucursal")
 
 def seleccionarSucursal(request, id_sucursal):
     sucursal = sucursales.objects.get(id_sucursal=id_sucursal)
@@ -40,10 +40,10 @@ def editarSucursal(request):
     sucursal.correo = correo
     sucursal.Horario = Horario
     sucursal.save() # guarda registro actualizado
-    return redirect("/")
+    return redirect("sucursal")
 
 
 def borrarSucursal(request, id_sucursal):
     sucursal = sucursales.objects.get(id_sucursal=id_sucursal)
     sucursal.delete() # borra el registro
-    return redirect("/")
+    return redirect("sucursal")
